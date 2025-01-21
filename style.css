@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #EEE7DF;
+    color: #2A2222;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+
+/*algemene css*/
+
+img {
+    border-radius: 5px;
+    box-shadow: inset;
+}
+
+header {
+    background-color: white;
+}
+
+.intro {
+    background-image: url('images/achtergrond-stof.png'); /* Voeg hier de afbeelding toe */
+    background-size: 100%; /* Zorg dat de afbeelding de sectie vult */
+    background-position: center; /* Centreer de afbeelding */
+    background-repeat: no-repeat; /* Voorkom herhaling van de afbeelding */
+    height: 62vh; /* Hoogte van de sectie */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro h1 {
+    font-family: "Abril Fatface", serif;
+    font-size: 2.7em;
+    line-height: 1.5;
+    margin: 10% 5% 0 5%;
+}
+
+.intro p {
+    font-family: "Montserrat", serif;
+    font-size: 1em;
+    margin: 5% 5% 0 5%;
+}
+
+.naaimachine {
+    position: absolute; 
+    right: 0; 
+    top: 62%; 
+    height: auto;
+}
+
+button {
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    font-family: "Montserrat", serif;
+    color: white;
+    background-color: #087836;
+    font-size: 0.9em;
+}
+
+article {
+    margin-bottom: 2rem;
+    margin: 0 5% 0 5%;
+}
+
+article h2 {
+    font-family: "Abril Fatface", serif;
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 0.5rem;
+}
+
+article h3 {
+    font-family: "Abril Fatface", serif;
+    font-size: 1em;
+}
+
+article p {
+    font-family: "Montserrat", serif;
+    font-size: 1em;
+    margin-top: 0.5rem;
+}
+
+article button {
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: #a4d4a2;
+    padding: 1rem;
+    margin-top: 15%;
+    font-size: 1.4em;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2A2222;
+    line-height: 2.5em;
+}
+
+footer p {
+    font-size: 0.9rem;
+    background-color: pink;
+    text-align: center;
+}
+}
