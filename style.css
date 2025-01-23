@@ -151,6 +151,11 @@ button:hover {
     margin-bottom: 2%;
 }
 
+.middenstuk button {
+    z-index: 998;
+    position:relative;
+}
+
 /* De steek pagina */
 
 article {
