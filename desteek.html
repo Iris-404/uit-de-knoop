@@ -9,21 +9,33 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="images/logo.png" alt="Uit de Knoop Logo" class="logo">
-            <button class="menu-button">MENU</button>
+        <a href="index.html"><img src="images/logo.png" alt="Uit de Knoop Logo" class="logo"></a>
+        <nav class="hamburger-menu" id="hamburger-menu">
+            <button class="close-btn" id="close-btn">&times;</button>
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="desteek.html">DE STEEK</a></li>
+                <li><a href="naaiproject.html">Het Naaiproject</a></li>
+                <li><a href="over.html">Over</a></li>
+            </ul>
         </nav>
-    </header>
+    <div class="menu-icon" id="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
     <main>
-        <article>
-        <h2>DE STEEK</h2>
-        <p>DE STEEK is een naaicafé in Amsterdam
+        <article class="top">
+        <h1><br>DE STEEK</h1>
+        <p>DE STEEK is een naaicafé in Amsterdam
              waar je workshops kunt volgen om 
              kleding te leren repareren, upcyclen en 
              naaien. Om zo mensen te inspireren om 
              bewuster met mode om te gaan.
         </p>
         <img src="images/de_steek.jpg" alt="DE STEEK gebouw">
+        <button class="button" onclick="window.open('https://desteekamsterdam.com/nl/', '_blank')">Bezoek DE STEEK</button>
         </article>
         <article>
         <h2>Duurzame Mode</h2>
@@ -35,7 +47,8 @@
         </p>
         <img src="images/duurzame-broeken.jpg" alt="Duurzame broeken">
         </article>
-        <article>
+        <br>
+        <article class="bottom">
             <h2>Mijn Naaiproject</h2>
             <p>Door de hulp van DE STEEK heb ik mijn eigen
                 naaiproject gerealiseerd. Dankzij hun 
@@ -59,4 +72,24 @@
         </nav>
         <p>Iris Platte 2025</p>
     </footer> 
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const closeBtn = document.getElementById('close-btn');
+        const menuLinks = document.querySelectorAll('.menu-list a');
+        
+        menuIcon.addEventListener('click', () => {
+            hamburgerMenu.classList.add('active');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            hamburgerMenu.classList.remove('active');
+        });
+        
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerMenu.classList.remove('active');
+            });
+        });
+        </script>
 </body>

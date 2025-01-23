@@ -8,36 +8,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <body>
     <header>
-        <nav>
-            <img src="images/logo.png" alt="Uit de Knoop Logo" class="logo">
-            <button class="menu-button">MENU</button>
+        <a href="index.html"><img src="images/logo.png" alt="Uit de Knoop Logo" class="logo"></a>
+        <nav class="hamburger-menu" id="hamburger-menu">
+            <button class="close-btn" id="close-btn">&times;</button>
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="desteek.html">DE STEEK</a></li>
+                <li><a href="naaiproject.html">Het Naaiproject</a></li>
+                <li><a href="over.html">Over</a></li>
+            </ul>
         </nav>
-    </header>
+    <div class="menu-icon" id="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
     <main>
-        <article>
-            <h2>Het Naaiproject</h2>
+        <article class="top-2">
+            <h1><br>Het Naaiproject</h1>
             <p>In mijn naaiproject heb ik mijn broek
                 ge-upcyclet. Met naald en draad geef ik mijn
                 oude broek een tweede leven. 
             </p>
         </article>
-        <article>
-            <h3>Stap 1</h3>
-            <p>Stap 1 uitleg...</p>
+        <article class="middenstuk-2">
+            <h2>Stap 1</h2>
             <img src="images/broek-kiezen.jpg" alt="Stap 1">
+            <p>Ik heb een oude broek gepakt om te 
+                upcyclen. Het idee is om er een stukje stof 
+                op te naaien voor een nieuw uiterlijk.</p>
 
-            <h3>Stap 2</h3>
-            <p>Stap 2 uitleg...</p>
+            <h2>Stap 2</h2>
             <img src="images/broek-pinnen.jpg" alt="Stap 2">
+            <p>Daarna heb ik een ster getekend op een stuk 
+                stof (een oud laken) en vervolgens uitgeknipt.</p>
 
-            <h3>Stap 3</h3>
-            <p>Stap 3 uitleg...</p>
+            <h2>Stap 3</h2>
             <img src="images/broek-naaien2.jpg" alt="Stap 3">
+            <p>Vervolgens speldde ik de ster op de broek, 
+                zodat deze alvast goed vastzit.</p>
+
+            <h2>Stap 4</h2>
+            <img src="images/broek-naaien2.jpg" alt="Stap 3">
+            <p>Met naald en draad maakte ik enkele steken 
+                in de broek, zodat de ster niet verschuift 
+                tijdens het naaien.</p>
+
+            <h2>Stap 5</h2>
+            <img src="images/broek-naaien2.jpg" alt="Stap 3">
+            <p>Daarna naaide ik de ster op de broek. Hierbij 
+                heb ik verschillende soorten steken op de 
+                naaimachine uitgeprobeerd.</p>
+
         </article>    
-        <article>
-            <h2>Eindresultaat</h2>
-            <p>Eindresultaat...</p>
+        <article class="bottom-2">
+            <h2>Het Eindresultaat</h2>
             <img src="images/broek-eindresultaat.jpg" alt="Eindresultaat">
+            <p>Voor mijn eerste keer naaien ben ik zeker blij 
+                met het eindresultaat. Ik wil zeker kijken of ik 
+                dit vaker kan doen met mijn kleding.</p>
         </article>
     </main>
     <footer>
@@ -51,4 +81,24 @@
         </nav>
         <p>Iris Platte 2025</p>
     </footer> 
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const closeBtn = document.getElementById('close-btn');
+        const menuLinks = document.querySelectorAll('.menu-list a');
+        
+        menuIcon.addEventListener('click', () => {
+            hamburgerMenu.classList.add('active');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            hamburgerMenu.classList.remove('active');
+        });
+        
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerMenu.classList.remove('active');
+            });
+        });
+        </script>
 </body>

@@ -6,33 +6,101 @@ body {
     margin: 0;
     padding: 0;
 
-/*algemene css*/
-
-img {
-    border-radius: 5px;
-    box-shadow: inset;
-}
-
 header {
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+}
+
+.logo { 
+        margin-left: 5%;
+        height: 100%;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 998;
+    margin-top: 13px;
+    margin-right: 3%;
+}
+
+.menu-icon div {
+    width: 45px;
+    height: 5px;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    background-color: #6290C8; 
+    width: 100%; 
+    height: 100%; 
+    box-shadow: none;
+    padding: 20px;
+    z-index: 999;
+    transition: all 0.3s ease; 
+}
+
+.hamburger-menu.active {
+    display: block; 
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 80px;
+    cursor: pointer;
+    color: #fff; 
+    position: absolute;
+    top: -24px;
+    right: 25px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 100px;
+}
+
+.menu-list li {
+    padding: 15px 0;
+ }
+
+.menu-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-family: "Montserrat", serif;
+    font-weight: bold;
 }
 
 .intro {
-    background-image: url('images/achtergrond-stof.png'); /* Voeg hier de afbeelding toe */
-    background-size: 100%; /* Zorg dat de afbeelding de sectie vult */
-    background-position: center; /* Centreer de afbeelding */
-    background-repeat: no-repeat; /* Voorkom herhaling van de afbeelding */
-    height: 62vh; /* Hoogte van de sectie */
+    background-image: url('images/achtergrond-naai.png');
+    background-size: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 62vh;
     position: relative;
     display: flex;
     flex-direction: column;
+    color: #EEEEEE;
 }
 
 .intro h1 {
-    font-family: "Abril Fatface", serif;
+    font-family: "Chonburi", serif;
     font-size: 2.7em;
     line-height: 1.5;
-    margin: 10% 5% 0 5%;
+    margin: 5% 5% 0 5%;
 }
 
 .intro p {
@@ -41,72 +109,219 @@ header {
     margin: 5% 5% 0 5%;
 }
 
-.naaimachine {
-    position: absolute; 
-    right: 0; 
-    top: 62%; 
-    height: auto;
+.tussenstuk {
+    background-image: url('images/home-naaimachine.png');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 62vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: -40%;
 }
 
 button {
     padding: 10px 15px 10px 15px;
-    border-radius: 5px;
     font-family: "Montserrat", serif;
-    color: white;
-    background-color: #087836;
-    font-size: 0.9em;
-}
-
-article {
-    margin-bottom: 2rem;
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    background-color: #812430;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     margin: 0 5% 0 5%;
 }
 
+button:hover {
+    background-color: #B25168;
+}
+
+.middenstuk { 
+    margin-top: -48%;
+}
+
+.middenstuk h2 {
+    margin-top: 13%;
+}
+
+.middenstuk p {
+    margin-bottom: 2%;
+}
+
+/* De steek pagina */
+
+article {
+    margin-bottom: 2rem;
+}
+
+article img{
+    border-radius: 5px;
+    margin-top: 7px;
+    margin: 0 5% 0% 5%;
+}
+
 article h2 {
-    font-family: "Abril Fatface", serif;
+    font-family: "Montserrat", serif;
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 0.5rem;
+    margin: 5% 5% 3% 5%;
 }
 
 article h3 {
-    font-family: "Abril Fatface", serif;
+    font-family: "Montserrat", serif;
     font-size: 1em;
+    margin: 0 5% 0 5%;
 }
 
 article p {
     font-family: "Montserrat", serif;
     font-size: 1em;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin: 3% 5% 2% 5%;
 }
 
 article button {
     margin-top: 1rem;
 }
 
+.top {
+    background-image: url('images/achtergrond-naai2.png');
+    background-size: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 87vh;
+    position: relative;
+    flex-direction: column;
+    color: #EEEEEE;
+}
+
+.top h1 {
+    font-family: "Chonburi", serif;
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.5rem;
+    margin: 0% 5% 0 5%;
+}
+
+.top p {
+    font-family: "Montserrat", serif;
+    font-size: 1em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin: 5% 5% 5% 5%;
+}
+
+.top img {
+    margin: 0 5% 2% 5%;
+}
+
+.bottom {
+    background-image: url('images/achtergrond-naai3.png');
+    background-size: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    margin-bottom: -20%;
+    height: 85vh;
+    position: relative;
+    flex-direction: column;
+    color: #EEEEEE;
+}
+
+.bottom h2 {
+    padding-top: 25%;
+}
+
+.bottom p {
+    padding-bottom: 3%;
+}
+
+/* Het naaiproject pagina */
+
+.bottom-2 {
+    background-image: url('images/achtergrond-naai5.png');
+    background-size: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    margin-bottom: -20%;
+    height: 70vh;
+    position: relative;
+    flex-direction: column;
+    color: #EEEEEE;
+}
+
+.bottom-2 h2 {
+    padding-top: 25%;
+}
+
+.bottom-2 p {
+    padding-bottom: 3%;
+}
+
+.middenstuk-2 p {
+    margin: 2% 5% 2% 5%;
+}
+
+.middenstuk-2 h2 {
+    margin: 9% 5% 2% 5%;
+}
+
+/* Over */
+
+.top-2 {
+    background-image: url('images/achtergrond-naai4.png');
+    background-size: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 45vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #EEEEEE;
+}
+
+.top-2 h1 {
+    font-family: "Chonburi", serif;
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.5rem;
+    margin: 0% 5% 0 5%;
+}
+
 footer {
-    background-color: #a4d4a2;
-    padding: 1rem;
-    margin-top: 15%;
+    background-color: #6290C8;
     font-size: 1.4em;
 }
 
 footer ul {
     list-style: none;
-    padding: 0;
-    margin: 0 0 1rem 0;
+    padding: 1rem;
+    margin-top: 15%;
+    margin-bottom: 0;
 }
 
 footer ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: #2A2222;
+    color: white;
     line-height: 2.5em;
+    font-family: "Montserrat", serif;
 }
 
 footer p {
     font-size: 0.9rem;
-    background-color: pink;
+    background-color: #081836;
+    font-family: "Montserrat", serif;
+    color: white;
     text-align: center;
+    padding: 1rem;
+    margin: 0;
 }
 }
